@@ -7,4 +7,4 @@ with open('quotes.txt', 'w') as f:
       line = line.replace('<span class="text" itemprop="text">“', '').replace('”</span>', "")
       line = line.strip()
       f.write(line)
-      f.write('\n')
+      f.write('\n') // 
