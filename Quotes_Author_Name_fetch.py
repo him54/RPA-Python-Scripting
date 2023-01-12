@@ -8,7 +8,7 @@ for q in soup.findAll('span', {'class':'text'}): // All data present in a page
   print(q.string)
 for a in soup .findAll('small', {'class':'author'}):
   print(a.string)
-print(t.attrs) #output - 
+print(t.attrs) #output - {'class': ['text'], 'itemprop': 'text'}  (Dictionary Form)
 
 #output
 “The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”
