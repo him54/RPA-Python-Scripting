@@ -6,3 +6,7 @@ for line in z.split("\n"):
     line = line.replace('<span class="text" itemprop="text">“', '').replace('”</span>', "") // replace span folder and " 
    line = line.strip() //remove white space
     print(line)
+
+    
+    #OUTPUT
+    
