@@ -11,7 +11,7 @@ for t1 in t2:
   movie_name = t1.find('td', {'class':'titleColumn'})
   print(movie_name.a.string, movie_name.span.string)
   
-     #  (altr)
+      # (altr)
 #<span id = 'alr' class = 'xyz
   #element/tag
 #OUTPUT
