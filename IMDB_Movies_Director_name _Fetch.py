@@ -28,7 +28,7 @@ for tr in trs:
     
     #OUTPUT
     
-    Enter the movie namethe godfather
+    Enter the movie name the godfather
 
 <!DOCTYPE html>
 
