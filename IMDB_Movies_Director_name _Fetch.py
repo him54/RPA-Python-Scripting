@@ -25,3 +25,5 @@ for tr in trs:
     soup2 = BeautifulSoup(html, 'html.parser')
     print(soup2)
     # div = soup.find('div', {'class'} : )
+    
+    #output
