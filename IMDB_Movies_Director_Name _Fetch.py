@@ -27,7 +27,7 @@ for tr in trs:
     # div = soup.find('div', {'class'} : )
     
     #OUTPUT
-    Enter the movie name the godfather
+   Enter the movie name the godfather
 
 <!DOCTYPE html>
 
