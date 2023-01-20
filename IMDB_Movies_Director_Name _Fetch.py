@@ -6,7 +6,7 @@ moviename = moviename.lower()
 
 r=requests.get('https://www.imdb.com/chart/top/')
 html = r.text
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, '')
 tb=soup.find('tbody',{'class':'lister-list'})
 trs=tb.findAll('tr',{'class'})
 trs=tb.findAll('tr')
