@@ -9,4 +9,4 @@ for i in range(1,11):
         line = line.replace('<span class="text" itemprop="text">“', '').replace('”</span>', "")
         line = line.strip(
         f.write(line)
-        f.write('\n'
+        f.write('\n')
