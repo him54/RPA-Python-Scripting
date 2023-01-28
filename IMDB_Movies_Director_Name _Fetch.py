@@ -4,7 +4,7 @@ import requests
 moviename = input("Enter the movie name")
 moviename = moviename.lower()
 
-r=requests.get('htps://www.imdb.com/chart/top/')
+r=requests.get('https://www.imdb.com/chart/top/')
 html = r.text
 soup = BeautifulSoup(html, 'html.parser')
 tb=soup.find('tbody',{'class':'lister-list'})
