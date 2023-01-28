@@ -3,7 +3,7 @@ import requests
 
 moviename = input("Enter the movie name")
 moviename = moviename.lower()
-
+s
 r=requests.get('https://www.imdb.com/chart/top/')
 html = r.text
 soup = BeautifulSoup(html, 'html.parser')
