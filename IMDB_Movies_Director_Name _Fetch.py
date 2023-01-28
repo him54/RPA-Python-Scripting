@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-moviename = input("Enter the movie name"
+moviename = input("Enter the movie name")_
 moviename = moviename.lower()
 
 r=requests.get('https://www.imdb.com/chart/top/')
