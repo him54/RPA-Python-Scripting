@@ -7,7 +7,7 @@
 #timedelta class - Diffrenece between two time class
 
 
-#ctime() - function of time module  (current time
+#ctime() - function of time module  (current time)
 #today() - Datetime module
 
 
