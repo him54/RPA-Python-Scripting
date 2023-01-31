@@ -20,4 +20,12 @@
 # print(weeks,days)
 
 
+# from datetime import*
+# d1 = datetime(2016,4,29,16,45,0)
+# p = timedelta(days=10, seconds=10, minutes=20, hours=12)
+# print(d1+p)
+
+from datetime import*
+date1 = datetime(1996,6, 26)
+print(date1 + timedelta(days = 10))
 
