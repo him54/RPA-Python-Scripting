@@ -25,7 +25,12 @@
 # p = timedelta(days=10, seconds=10, minutes=20, hours=12)
 # print(d1+p)
 
+#output
+
+
 from datetime import*
 date1 = datetime(1996,6, 26)
 print(date1 + timedelta(days = 10))
 
+# output
+1996-07-06 00:00:00
