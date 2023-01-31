@@ -14,5 +14,10 @@
 # date2 = date(y2,m2,d2)
 # print(d2)
 
+# diff = date1-date2 # Difference between two date
+# #weaks = diff.days // 7
+# weeks,days=(divmod(diff.days, 7))
+# print(weeks,days)
+
 
 
