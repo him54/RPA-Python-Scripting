@@ -8,7 +8,7 @@ with open('data.csv', 'r') as f:
     details = z[1].split()
     print(details)
 # OPEN GOOGLE FORM IN CHROME
-driver = webdriver.Chrome(executable_path='chromedriver.exe')
+driver = webdriver.Chrome(executable_path='chromedriver.exe'
 driver.maximize_window()
 driver.get('https://docs.google.com/forms/d/e/1FAIpQLSelgrZw0-S-Yf7OjFLAmYZ22XzZvuuJu4gkhEUitAcZiQHQKQ/viewform')
 time.sleep(3)
