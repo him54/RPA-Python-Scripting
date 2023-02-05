@@ -11,7 +11,7 @@ with open('data.csv', 'r') as f:
 driver = webdriver.Chrome(executable_path='chromedriver.exe')
 driver.maximize_window()
 driver.get('https://docs.google.com/forms/d/e/1FAIpQLSelgrZw0-S-Yf7OjFLAmYZ22XzZvuuJu4gkhEUitAcZiQHQKQ/viewform')
-time.sleep(3
+time.sleep(3)
 
 # NAME IN GOOGLE FORM
 name = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div['
