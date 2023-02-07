@@ -26,4 +26,4 @@ for container in containers:
 d={'Title':title_list,'Subtitle':subtitle_list, 'Link': link_list}
 dataframe = pd.DataFrame(d)
 dataframe.to_csv('news.csv')
-driver.quit(
+driver.quit()
