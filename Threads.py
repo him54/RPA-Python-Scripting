@@ -1,6 +1,6 @@
 #t.start() - Start ur thread here
 #t.join([timeout]) - Thread timeout
-#t.daemon - This is property that takes either true or fals
+#t.daemon - This is property that takes either true or false
 
 # creating a thread without using a class
 #creating a thread by creating sub class to Thread class  - Inheritance
