@@ -43,5 +43,8 @@ t1=Thread(target=obj.display, args=(1,2,))
 t1.start()
 t1.join()
 
+#OUTPUT
+Hello
+1 2
 
 
