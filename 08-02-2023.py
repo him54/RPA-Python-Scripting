@@ -27,9 +27,9 @@ containers = driver.find_elements(By.XPATH, value= '//div[@class="teaser__copy-c
 for container in containers:
     title = container.find_element(By.XPATH, value='./a/h3').text
     subtitle = container.find_element(By.XPATH, value='./a/p').text
-    link = container.find_element(By.XPATH,value='./a').get_attribute('href'
+    link = container.find_element(By.XPATH,value='./a').get_attribute('href')
     title_list.append(title)
-    subtitle_list.append(subtitle)
+    subtitle_list.append(subtitle
     link_list.append(link)
 
 d={'Title':title_list,'Subtitle':subtitle_list, 'Link': link_list}
