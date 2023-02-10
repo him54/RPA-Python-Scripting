@@ -21,7 +21,7 @@ title_list=[]
 subtitle_list=[]
 link_list=[]
 #<div class="teaser__copy-container"><a class="text-anchor-wrap" href="https://www.thesun.co.uk/sport/21296749/chelsea-hire-mental-coach-blacks-winning-culture/"><h3 class="teaser__headline t-p-color">IN-OKA</h3><p class="teaser__subdeck"> Chelsea hire All Blacks' mental skills coach to help create winning culture</p></a></div>
-*[@id="customiser-v2-13503409"]/div[9]/div/div[3]/div/div[2]
+#*[@id="customiser-v2-13503409"]/div[9]/div/div[3]/div/div[2]
 
 containers = driver.find_elements(By.XPATH, value= '//div[@class="teaser__copy-container"]')
 for container in containers:
