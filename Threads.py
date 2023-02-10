@@ -31,7 +31,7 @@ from threading import*
 class MyThread(Thread):
     def __init__(self, s):
         #super().__init__()      super() function is used to give access to methods and properties of a parent or sibling class.
-                                 # The super() function returns an object that represents the parent class.
+                                 The super() function returns an object that represents the parent class.
         Thread.__init__(self)
         self.s = s
     def display(self, x, y):
