@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from _datetime import datetime
 import os
 import sys
-application_path = os.path.dirname(sys.executable) #if we fine our director
+application_path = os.path.dirname(sys.executable) #if we fine our directory
 now = datetime.now()
 dt=now.strftime("%m%d%y")
 print(dt)
