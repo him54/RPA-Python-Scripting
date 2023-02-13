@@ -1,7 +1,7 @@
 #Random - Generate your random function
 #random.randint(1, 10) - 1 to 10 include number
 #random.randrancy(1,10)  - 1 to 9
-#random.randient(3.5, 5) - Showing error becom not used any float value random function.
+#random.randient(3.5, 5) - Showing error becom not used any float value random function
 
 from threading import*
 from time import*
