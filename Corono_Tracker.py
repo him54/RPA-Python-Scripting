@@ -64,3 +64,14 @@ sys.exit(app.exec_())
 
 
 #OUTPUT
+<div id="maincounter-wrap" style="margin-top:15px">
+ <h1>
+  Coronavirus Cases:
+ </h1>
+ <div class="maincounter-number">
+  <span style="color:#aaa">
+   677,609,790
+  </span>
+ </div>
+</div>
+
