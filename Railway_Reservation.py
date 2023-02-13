@@ -1,3 +1,4 @@
+
 import threading
 
 class RailwayReservationSystem:
@@ -21,3 +22,4 @@ for t in threads:
     t.start()
 for t in threads:
     t.join()
+#can use locks to ensure that only one thread can access a shared resource (the reservation system) at a time:
