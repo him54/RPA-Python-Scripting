@@ -3,6 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import PyQt5.QtWebEngineWidgets
 from bs4 import BeautifulSoup
+from datetime import datetime
 import requests
 
 class Window(QMainWindow):
@@ -53,6 +54,8 @@ class Window(QMainWindow):
         page = requests.get('https://www.worldometers.info/coronavirus/')
         soup = BeautifulSoup(page.content, 'html.parser')
         results = soup.find(id='maincounter-wrap')
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"Date: {now}")
         print(results.prettify())
 
 app = QApplication(sys.argv)
@@ -60,18 +63,3 @@ QApplication.setApplicationName('CoronaTracker')
 main = Window()
 main.scrape_data()
 sys.exit(app.exec_())
-
-
-
-#OUTPUT
-<div id="maincounter-wrap" style="margin-top:15px">
- <h1>
-  Coronavirus Cases:
- </h1>
- <div class="maincounter-number">
-  <span style="color:#aaa">
-   677,609,790
-  </span>
- </div>
-</div>
-
