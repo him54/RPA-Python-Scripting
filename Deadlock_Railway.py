@@ -29,7 +29,7 @@ T1 = Thread(target = bookticket)
 T2 = Thread(target = cancelticket)
 
 T1.start()
-T2.start
+T2.start()
 
 
 #When bookticket() acquires l1 lock and cancelticket() acquires l2 lock,
