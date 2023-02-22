@@ -40,6 +40,19 @@ t2 = Thread(target=cn.consume)
 t1.start()
 t2.start()
 
+#OUTPUT
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+Item Purchased
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # from threading import *
 # from time import *
