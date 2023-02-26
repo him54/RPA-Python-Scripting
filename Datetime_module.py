@@ -32,7 +32,7 @@ print('Time: {}:{}:{}'.format(now.hour, now.minute, now.second))
 
 now = date.today()
 print(now)
-str = now.strftime("%e, %A")
+str = now.strftime("%e, %A"
 print(str)
 
 
