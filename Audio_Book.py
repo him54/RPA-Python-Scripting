@@ -7,7 +7,7 @@ pages=len(reader.pages)
 print(pages)
 
 
-speaker= pyttsx3.init() #Initialize the pyttsx3 engine
+speaker= pyttsx3.init() #Initialize the pyttsx3 engin
 for i in range(pages):
     page = reader.pages[i]
     text = page.extract_text()
