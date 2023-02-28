@@ -47,4 +47,7 @@ while msg:
     print("message : "+ msg.decode())
     msg=s.recv(1024)
 s.close()
+#OUTPUT
+Message : Hello, how are you?
+Message : I am fine.
 
