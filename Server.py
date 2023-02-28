@@ -31,3 +31,20 @@ c.close()
 
 #OUTPUT
 ('127.0.0.1', 53152)
+
+
+import socket
+host="localhost"
+port=5000
+
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+s.connect((host,port))
+
+msg=s.recv(1024)
+# s.rev multiple of 1024 Next value will take 1024 * 2 , 1024 * 4
+while msg:
+    print("message : "+ msg.decode())
+    msg=s.recv(1024)
+s.close()
+
