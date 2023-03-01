@@ -90,5 +90,30 @@ print(f"The cheapest flight price is {cheapest_price} and cheapest flight name i
         #/html/body/div[1]/div/main/div/div/div[2]/div[2]/div[8]/div/div[1]/div[1]/div/div[2]/div[3]
         #//*[@id="root"]/div/main/div/div/div[2]/div[2]/div[8]/div/div[2]/div[1]/div/div[2]/div[3]/div[2]
     
+    #OUTPUT - CSV FILE
+    ,Name,no,Price
+0,IndiGo,6E-687,"7,141"
+1,IndiGo,6E-6621,"7,339"
+2,IndiGo,6E-2174,"7,339"
+3,IndiGo,6E-735,"7,339"
+4,IndiGo,6E-2402,"7,339"
+5,Air India,AI-501,"7,443"
+6,Air India,AI-503,"7,443"
+7,Air India,AI-511,"7,443"
+8,Air India,AI-808,"7,443"
+9,Air India,AI-564,"7,537"
+10,SpiceJet,SG-535,"7,578"
+11,IndiGo,6E-6813,"7,650"
+12,Air Asia,I5-749,"7,700"
+13,IndiGo,6E-6465,"7,884"
+14,IndiGo,6E-855,"7,912"
+15,IndiGo,6E-638,"7,929"
+16,IndiGo,6E-2053,"8,179"
+17,IndiGo,6E-5039,"8,179"
+18,Air Asia,I5-1532,"8,493"
+19,Air India,AI-509,"8,493"
+20,IndiGo,6E-7382,"8,746"
+
+    
     
     
