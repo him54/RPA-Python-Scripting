@@ -9,7 +9,7 @@
 # print(tpl.params)
 # print(tpl.geturl())
 
-import socket
+import socket    # SERVER
 
 host = "localhost"
 port = 5000
@@ -33,7 +33,7 @@ c.close()
 ('127.0.0.1', 53152)
 
 
-import socket
+import socket   #CLIENT
 host="localhost"
 port=5000
 
