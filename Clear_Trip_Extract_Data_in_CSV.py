@@ -8,7 +8,7 @@
 #import libraries : using sum necessary libraries selenium , pandas and date time module
 #open the browser :  we are using web driver package
 #We enter the data into csv we need to use list dictionay and pandas
-#Enter the source option  to fill the souce is Banglore and destination is 
+#Enter the source option  to fill the souce is Banglore and destination is Delhi
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
