@@ -19,7 +19,7 @@ while True:  #Server runs continuously
     print("From client:"+str(data.decode())) #Recieved his data
     response = input("Enter the responce")
     c.send(response.encode())
-s.close()
+s.close(
 
 
 
