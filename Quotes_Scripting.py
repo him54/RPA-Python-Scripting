@@ -19,4 +19,4 @@ Try not to become a man of success. Rather become a man of value.
 It is better to be hated for what you are than to be loved for what you are not.
 I have not failed. I&#39;ve just found 10,000 ways that won&#39;t work.
 A woman is like a tea bag; you never know how strong it is until it&#39;s in hot water.
-A day without sunshine is like, you know, night
+A day without sunshine is like, you know, night.
