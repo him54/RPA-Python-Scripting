@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtCore import *
+from PyQt5.QtCore import 
 from PyQt5.QtWidgets import *
 import PyQt5.QtWebEngineWidgets
 from bs4 import BeautifulSoup
