@@ -19,4 +19,4 @@ for row in data:
 cell = sheet.cell(row=8, column=4)
 cell.value = "=SUM(D2:D7)"
 cell.font = cell.font.copy(bold=True)
-wb.save("student.xlsx")
+wb.save("student.xlsx"
