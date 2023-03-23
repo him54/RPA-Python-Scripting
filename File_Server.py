@@ -24,7 +24,7 @@ try:
     f.close()
 except FileNotFoundError:
         c.send("File not found")
-c.close(
+c.close()
 
 
 
