@@ -23,7 +23,7 @@ for path in p2.iterdir():
 
 
 
-#Without renam
+#Without rename
 dir = Path("files")
 for file in dir.iterdir():
     if file.is_file():
