@@ -1,5 +1,4 @@
 from pathlib import Path
-
 p1 = Path('files/hello1.txt')
 
 # print(type(p1)) #<class 'pathlib.WindowsPath'>
@@ -24,7 +23,7 @@ for path in p2.iterdir():
 
 
 
-#Without rename
+#Without renam
 dir = Path("files")
 for file in dir.iterdir():
     if file.is_file():
