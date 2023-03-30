@@ -4,9 +4,10 @@ p1 = Path('files/hello1.txt')
 
 # print(type(p1)) #<class 'pathlib.WindowsPath'>
 #
+#Important 
 # print(p1.name) #hello1.txt   Give full file name
 # print(p1.stem) #hello1  Give first portion
-# print(p1.suffix)  #.txt   Give .portion
+# print(p1.suffix)  #.txt   Give .portion 
 #
 # p2 = Path("files")
 # print(list(p2.iterdir())) #[WindowsPath('files/hello1.txt'), WindowsPath('files/hello2.txt')]
