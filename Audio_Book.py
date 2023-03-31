@@ -1,7 +1,7 @@
 import pyttsx3
 import PyPDF2
 from PyPDF2 import PdfReader
-book = open("Seminar Topics.pdf", "rb") #Open the PDF file in binary mod
+book = open("Seminar Topics.pdf", "rb") #Open the PDF file in binary mode
 reader= PyPDF2.PdfReader(book)   #Read the PDF file using PyPDF2
 pages=len(reader.pages)
 print(pages)
