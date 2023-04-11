@@ -1,17 +1,25 @@
 import csv
 import sys
+import requests
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 from bs4 import BeautifulSoup
-import requests
+#I have created our own browser and extracted all the lectures of Bhagavad Gita. The CSV link has also been provided."
+#1-This is a Python program that uses PyQt5 and BeautifulSoup libraries to extract data from a website and save it as a CSV file.
+#2-The program opens a web page in a QWebEngineView widget, and allows the user to navigate to other pages using a navigation bar.
+# When the user navigates to a specific URL, the program extracts data from a table on the page and saves it as a CSV file.
 
+
+  #/html/body/div[3]/div/div[2]/div[4]/div[1]/a
+  #/html/body/div[3]/div/div[2]
+  #//*[@id="content"]/div/div[2]/div[4]/div[1]
 
 class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl('https://prabhupadavani.org/audio/'))
+        self.browser.setUrl(QUrl('https://prabhupadavani.org/transcriptions/?audio=Has+audio&type=Bhagavad-gita'))
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
@@ -35,10 +43,6 @@ class Window(QMainWindow):
         home_button.triggered.connect(self.navigate_home)
         navigation_bar.addAction(home_button)
 
-        data_button = QAction('Extract Data', self)
-        data_button.triggered.connect(self.extract_data)
-        navigation_bar.addAction(data_button)
-
         self.url_bar = QLineEdit()
         self.url_bar.returnPressed.connect(self.navigate_to_url)
         navigation_bar.addWidget(self.url_bar)
@@ -46,7 +50,7 @@ class Window(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('https://prabhupadavani.org/audio/'))
+        self.browser.setUrl(QUrl('https://prabhupadavani.org/transcriptions/?audio=Has+audio&type=Bhagavad-gita'))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
@@ -54,46 +58,55 @@ class Window(QMainWindow):
 
     def update_url(self, q):
         self.url_bar.setText(q.toString())
+        if q.toString() == 'https://prabhupadavani.org/transcriptions/?audio=Has+audio&type=Bhagavad-gita':
+            self.extract_data()
 
     def extract_data(self):
-        # Extract Bhagavad Gita lectures data
-        self.extract_lectures_data('Bhagavad Gita', 'https://prabhupadavani.org/audio/bhagavad-gita')
+        html = self.browser.page().toHtml(lambda data: self.process_html(data))
 
-        # Extract Srimad Bhagavatam lectures data
-        self.extract_lectures_data('Srimad Bhagavatam', 'https://prabhupadavani.org/audio/srimad-bhagavatam')
-
-    def extract_lectures_data(self, category, url):
-        # Create a BeautifulSoup object by requesting the website content
-        html = requests.get(url).text
+    def process_html(self, html):
         soup = BeautifulSoup(html, 'html.parser')
+        table = soup.find('table', {'class': 'table table-striped table-hover'})
+        rows = table.findAll('tr')
+        with open('data.csv', 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Title', 'Speaker', 'Date', 'Description', 'Language'])
+            for row in rows:
+                cols = row.findAll('td')
+                if len(cols) == 5:
+                    title = cols[0].text.strip()
+                    speaker = cols[1].text.strip()
+                    date = cols[2].text.strip()
+                    description = cols[3].text.strip()
+                    language = cols[4].text.strip()
+                    writer.writerow([title, speaker, date, description, language])
 
-        # Extract links to all audio recordings
-        links = []
-        for div in soup.find_all('div', {'class': 'media-library-single'}):
-            link = div.find('a').get('href')
-            links.append(link)
-
-        # Extract data from each recording and save to a CSV file
-        filename = category.lower().replace(' ', '_') + '_data.csv'
-        with open(filename, 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(['Title', 'Speaker', 'Date', 'Length'])
-
-            for link in links:
-                # Load individual recording page
-                html = requests.get(link).text
-                soup = BeautifulSoup(html, 'html.parser')
-
-                # Extract desired data from page
-                title = soup.find('h2', {'class': 'media-library-title'}).text.strip()
-                speaker = soup.find('div', {'class': 'media-library-meta-speaker'}).text.strip()
-                date = soup.find('div', {'class': 'media-library-meta-date'}).text.strip()
-                length = soup.find('div', {'class': 'media-library-meta-length'}).text.strip()
-
-                # Write data to CSV file
-                writer.writerow([title, speaker, date, length])
 
 app = QApplication(sys.argv)
 QApplication.setApplicationName('Prabhupada_Warriors')
 main = Window()
 app.exec_()
+
+
+
+# from lxml import html
+# import requests
+# import csv
+
+# url = 'https://prabhupadavani.org/transcriptions/?audio=Has+audio&type=Bhagavad-gita'
+# page = requests.get(url)
+# tree = html.fromstring(page.content)
+
+# rows = tree.xpath('//*[@id="content"]/div/div[2]/div[4]/div[1]/table/tbody/tr')
+# with open('data1.csv', 'w', newline='') as f:
+#     writer = csv.writer(f)
+#     writer.writerow(['Title', 'Speaker', 'Date', 'Description', 'Language'])
+#     for row in rows:
+#         cols = row.xpath('td')
+#         if len(cols) == 5:
+#             title = cols[0].text_content().strip()
+#             speaker = cols[1].text_content().strip()
+#             date = cols[2].text_content().strip()
+#             description = cols[3].text_content().strip()
+#             language = cols[4].text_content().strip()
+#             writer.writerow([title, speaker, date, description, language])
