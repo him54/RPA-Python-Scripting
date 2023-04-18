@@ -13,7 +13,7 @@ class Mythread:
 
 
     def task2(self):
-        print("step2 of my problem"
+        print("step2 of my problem")
         time.sleep(5)
         print("step completely")
 
